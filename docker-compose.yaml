@@ -1,0 +1,25 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: Todo-Proj
+    volumes:
+      - .:/var/www/html
+    ports:
+      - "8000:9000"
+    networks:
+      - my-network
+    depends_on:
+      - db
+  db:
+    image: mariadb:10.4.28
+    container_name: Todo-proj
+    environment:
+      MYSQL_DATABASE: php_projects
+      MYSQL_ROOT_PASSWORD: ""
+    networks:
+      - my-network
+networks:
+  my-network:

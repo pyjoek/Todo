@@ -1,0 +1,10 @@
+category{
+    =>michezo
+    =>kitaifa
+    =>tehama
+    =>bihashara
+}
+
+article{
+    
+}
