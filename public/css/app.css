@@ -1,0 +1,30 @@
+main {
+    width: 80%;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    height: 6vh;
+    justify-content: space-between;
+}
+.top input {
+    float: left;
+    width: 95%;
+    border: none;
+    outline: none;
+    border-bottom: 3px solid red;
+}
+
+.top button {
+    float: right;
+    width: 5%;
+    border: none;
+    background: none;
+    font-weight: 900;
+    font-size: xx-large;
+}
