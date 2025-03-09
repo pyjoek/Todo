@@ -10,7 +10,11 @@ use Illuminate\Support\Facades\Event;
 class EventServiceProvider extends ServiceProvider
 {
     /**
+<<<<<<< HEAD
      * The event listener mappings for the application.
+=======
+     * The event to listener mappings for the application.
+>>>>>>> c7c93a3 (sample todo project using laravel)
      *
      * @var array<class-string, array<int, class-string>>
      */
@@ -22,6 +26,7 @@ class EventServiceProvider extends ServiceProvider
 
     /**
      * Register any events for your application.
+<<<<<<< HEAD
      *
      * @return void
      */
@@ -29,4 +34,19 @@ class EventServiceProvider extends ServiceProvider
     {
         //
     }
+=======
+     */
+    public function boot(): void
+    {
+        //
+    }
+
+    /**
+     * Determine if events and listeners should be automatically discovered.
+     */
+    public function shouldDiscoverEvents(): bool
+    {
+        return false;
+    }
+>>>>>>> c7c93a3 (sample todo project using laravel)
 }

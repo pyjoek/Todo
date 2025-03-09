@@ -13,7 +13,11 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'default' => env('FILESYSTEM_DRIVER', 'local'),
+=======
+    'default' => env('FILESYSTEM_DISK', 'local'),
+>>>>>>> c7c93a3 (sample todo project using laravel)
 
     /*
     |--------------------------------------------------------------------------
@@ -22,7 +26,11 @@ return [
     |
     | Here you may configure as many filesystem "disks" as you wish, and you
     | may even configure multiple disks of the same driver. Defaults have
+<<<<<<< HEAD
     | been setup for each driver as an example of the required options.
+=======
+    | been set up for each driver as an example of the required values.
+>>>>>>> c7c93a3 (sample todo project using laravel)
     |
     | Supported Drivers: "local", "ftp", "sftp", "s3"
     |
@@ -33,6 +41,10 @@ return [
         'local' => [
             'driver' => 'local',
             'root' => storage_path('app'),
+<<<<<<< HEAD
+=======
+            'throw' => false,
+>>>>>>> c7c93a3 (sample todo project using laravel)
         ],
 
         'public' => [
@@ -40,6 +52,10 @@ return [
             'root' => storage_path('app/public'),
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
+<<<<<<< HEAD
+=======
+            'throw' => false,
+>>>>>>> c7c93a3 (sample todo project using laravel)
         ],
 
         's3' => [
@@ -51,6 +67,10 @@ return [
             'url' => env('AWS_URL'),
             'endpoint' => env('AWS_ENDPOINT'),
             'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
+<<<<<<< HEAD
+=======
+            'throw' => false,
+>>>>>>> c7c93a3 (sample todo project using laravel)
         ],
 
     ],

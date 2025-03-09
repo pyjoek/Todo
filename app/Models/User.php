@@ -2,7 +2,11 @@
 
 namespace App\Models;
 
+<<<<<<< HEAD
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+=======
+// use Illuminate\Contracts\Auth\MustVerifyEmail;
+>>>>>>> c7c93a3 (sample todo project using laravel)
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -40,5 +44,9 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+<<<<<<< HEAD
+=======
+        'password' => 'hashed',
+>>>>>>> c7c93a3 (sample todo project using laravel)
     ];
 }

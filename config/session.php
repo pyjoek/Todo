@@ -72,7 +72,11 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'connection' => env('SESSION_CONNECTION', null),
+=======
+    'connection' => env('SESSION_CONNECTION'),
+>>>>>>> c7c93a3 (sample todo project using laravel)
 
     /*
     |--------------------------------------------------------------------------
@@ -100,7 +104,11 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'store' => env('SESSION_STORE', null),
+=======
+    'store' => env('SESSION_STORE'),
+>>>>>>> c7c93a3 (sample todo project using laravel)
 
     /*
     |--------------------------------------------------------------------------
@@ -155,7 +163,11 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'domain' => env('SESSION_DOMAIN', null),
+=======
+    'domain' => env('SESSION_DOMAIN'),
+>>>>>>> c7c93a3 (sample todo project using laravel)
 
     /*
     |--------------------------------------------------------------------------
@@ -198,4 +210,20 @@ return [
 
     'same_site' => 'lax',
 
+<<<<<<< HEAD
+=======
+    /*
+    |--------------------------------------------------------------------------
+    | Partitioned Cookies
+    |--------------------------------------------------------------------------
+    |
+    | Setting this value to true will tie the cookie to the top-level site for
+    | a cross-site context. Partitioned cookies are accepted by the browser
+    | when flagged "secure" and the Same-Site attribute is set to "none".
+    |
+    */
+
+    'partitioned' => false,
+
+>>>>>>> c7c93a3 (sample todo project using laravel)
 ];

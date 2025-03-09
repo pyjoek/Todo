@@ -1,5 +1,6 @@
 {
     "private": true,
+<<<<<<< HEAD
     "scripts": {
         "dev": "npm run development",
         "development": "mix",
@@ -14,5 +15,16 @@
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
         "postcss": "^8.1.14"
+=======
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "axios": "^1.6.4",
+        "laravel-vite-plugin": "^1.0.0",
+        "vite": "^5.0.0"
+>>>>>>> c7c93a3 (sample todo project using laravel)
     }
 }

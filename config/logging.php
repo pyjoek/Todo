@@ -3,6 +3,10 @@
 use Monolog\Handler\NullHandler;
 use Monolog\Handler\StreamHandler;
 use Monolog\Handler\SyslogUdpHandler;
+<<<<<<< HEAD
+=======
+use Monolog\Processor\PsrLogMessageProcessor;
+>>>>>>> c7c93a3 (sample todo project using laravel)
 
 return [
 
@@ -30,7 +34,14 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'deprecations' => env('LOG_DEPRECATIONS_CHANNEL', 'null'),
+=======
+    'deprecations' => [
+        'channel' => env('LOG_DEPRECATIONS_CHANNEL', 'null'),
+        'trace' => false,
+    ],
+>>>>>>> c7c93a3 (sample todo project using laravel)
 
     /*
     |--------------------------------------------------------------------------
@@ -58,6 +69,10 @@ return [
             'driver' => 'single',
             'path' => storage_path('logs/laravel.log'),
             'level' => env('LOG_LEVEL', 'debug'),
+<<<<<<< HEAD
+=======
+            'replace_placeholders' => true,
+>>>>>>> c7c93a3 (sample todo project using laravel)
         ],
 
         'daily' => [
@@ -65,6 +80,10 @@ return [
             'path' => storage_path('logs/laravel.log'),
             'level' => env('LOG_LEVEL', 'debug'),
             'days' => 14,
+<<<<<<< HEAD
+=======
+            'replace_placeholders' => true,
+>>>>>>> c7c93a3 (sample todo project using laravel)
         ],
 
         'slack' => [
@@ -73,16 +92,30 @@ return [
             'username' => 'Laravel Log',
             'emoji' => ':boom:',
             'level' => env('LOG_LEVEL', 'critical'),
+<<<<<<< HEAD
+=======
+            'replace_placeholders' => true,
+>>>>>>> c7c93a3 (sample todo project using laravel)
         ],
 
         'papertrail' => [
             'driver' => 'monolog',
             'level' => env('LOG_LEVEL', 'debug'),
+<<<<<<< HEAD
             'handler' => SyslogUdpHandler::class,
             'handler_with' => [
                 'host' => env('PAPERTRAIL_URL'),
                 'port' => env('PAPERTRAIL_PORT'),
             ],
+=======
+            'handler' => env('LOG_PAPERTRAIL_HANDLER', SyslogUdpHandler::class),
+            'handler_with' => [
+                'host' => env('PAPERTRAIL_URL'),
+                'port' => env('PAPERTRAIL_PORT'),
+                'connectionString' => 'tls://'.env('PAPERTRAIL_URL').':'.env('PAPERTRAIL_PORT'),
+            ],
+            'processors' => [PsrLogMessageProcessor::class],
+>>>>>>> c7c93a3 (sample todo project using laravel)
         ],
 
         'stderr' => [
@@ -93,16 +126,29 @@ return [
             'with' => [
                 'stream' => 'php://stderr',
             ],
+<<<<<<< HEAD
+=======
+            'processors' => [PsrLogMessageProcessor::class],
+>>>>>>> c7c93a3 (sample todo project using laravel)
         ],
 
         'syslog' => [
             'driver' => 'syslog',
             'level' => env('LOG_LEVEL', 'debug'),
+<<<<<<< HEAD
+=======
+            'facility' => LOG_USER,
+            'replace_placeholders' => true,
+>>>>>>> c7c93a3 (sample todo project using laravel)
         ],
 
         'errorlog' => [
             'driver' => 'errorlog',
             'level' => env('LOG_LEVEL', 'debug'),
+<<<<<<< HEAD
+=======
+            'replace_placeholders' => true,
+>>>>>>> c7c93a3 (sample todo project using laravel)
         ],
 
         'null' => [

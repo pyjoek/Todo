@@ -4,6 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
+<<<<<<< HEAD
 class CreateFailedJobsTable extends Migration
 {
     /**
@@ -12,6 +13,14 @@ class CreateFailedJobsTable extends Migration
      * @return void
      */
     public function up()
+=======
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+>>>>>>> c7c93a3 (sample todo project using laravel)
     {
         Schema::create('failed_jobs', function (Blueprint $table) {
             $table->id();
@@ -26,6 +35,7 @@ class CreateFailedJobsTable extends Migration
 
     /**
      * Reverse the migrations.
+<<<<<<< HEAD
      *
      * @return void
      */
@@ -34,3 +44,11 @@ class CreateFailedJobsTable extends Migration
         Schema::dropIfExists('failed_jobs');
     }
 }
+=======
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('failed_jobs');
+    }
+};
+>>>>>>> c7c93a3 (sample todo project using laravel)

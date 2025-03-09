@@ -18,6 +18,10 @@ return [
         'domain' => env('MAILGUN_DOMAIN'),
         'secret' => env('MAILGUN_SECRET'),
         'endpoint' => env('MAILGUN_ENDPOINT', 'api.mailgun.net'),
+<<<<<<< HEAD
+=======
+        'scheme' => 'https',
+>>>>>>> c7c93a3 (sample todo project using laravel)
     ],
 
     'postmark' => [

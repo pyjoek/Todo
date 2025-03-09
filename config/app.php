@@ -1,5 +1,11 @@
 <?php
 
+<<<<<<< HEAD
+=======
+use Illuminate\Support\Facades\Facade;
+use Illuminate\Support\ServiceProvider;
+
+>>>>>>> c7c93a3 (sample todo project using laravel)
 return [
 
     /*
@@ -54,7 +60,11 @@ return [
 
     'url' => env('APP_URL', 'http://localhost'),
 
+<<<<<<< HEAD
     'asset_url' => env('ASSET_URL', null),
+=======
+    'asset_url' => env('ASSET_URL'),
+>>>>>>> c7c93a3 (sample todo project using laravel)
 
     /*
     |--------------------------------------------------------------------------
@@ -125,6 +135,27 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+<<<<<<< HEAD
+=======
+    | Maintenance Mode Driver
+    |--------------------------------------------------------------------------
+    |
+    | These configuration options determine the driver used to determine and
+    | manage Laravel's "maintenance mode" status. The "cache" driver will
+    | allow maintenance mode to be controlled across multiple machines.
+    |
+    | Supported drivers: "file", "cache"
+    |
+    */
+
+    'maintenance' => [
+        'driver' => 'file',
+        // 'store' => 'redis',
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+>>>>>>> c7c93a3 (sample todo project using laravel)
     | Autoloaded Service Providers
     |--------------------------------------------------------------------------
     |
@@ -134,6 +165,7 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'providers' => [
 
         /*
@@ -162,6 +194,9 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+=======
+    'providers' => ServiceProvider::defaultProviders()->merge([
+>>>>>>> c7c93a3 (sample todo project using laravel)
         /*
          * Package Service Providers...
          */
@@ -174,8 +209,12 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+<<<<<<< HEAD
 
     ],
+=======
+    ])->toArray(),
+>>>>>>> c7c93a3 (sample todo project using laravel)
 
     /*
     |--------------------------------------------------------------------------
@@ -188,6 +227,7 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'aliases' => [
 
         'App' => Illuminate\Support\Facades\App::class,
@@ -231,5 +271,10 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
     ],
+=======
+    'aliases' => Facade::defaultAliases()->merge([
+        // 'Example' => App\Facades\Example::class,
+    ])->toArray(),
+>>>>>>> c7c93a3 (sample todo project using laravel)
 
 ];

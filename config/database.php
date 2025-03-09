@@ -74,7 +74,11 @@ return [
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
+<<<<<<< HEAD
             'schema' => 'public',
+=======
+            'search_path' => 'public',
+>>>>>>> c7c93a3 (sample todo project using laravel)
             'sslmode' => 'prefer',
         ],
 
@@ -89,6 +93,11 @@ return [
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
+<<<<<<< HEAD
+=======
+            // 'encrypt' => env('DB_ENCRYPT', 'yes'),
+            // 'trust_server_certificate' => env('DB_TRUST_SERVER_CERTIFICATE', 'false'),
+>>>>>>> c7c93a3 (sample todo project using laravel)
         ],
 
     ],
@@ -129,7 +138,12 @@ return [
         'default' => [
             'url' => env('REDIS_URL'),
             'host' => env('REDIS_HOST', '127.0.0.1'),
+<<<<<<< HEAD
             'password' => env('REDIS_PASSWORD', null),
+=======
+            'username' => env('REDIS_USERNAME'),
+            'password' => env('REDIS_PASSWORD'),
+>>>>>>> c7c93a3 (sample todo project using laravel)
             'port' => env('REDIS_PORT', '6379'),
             'database' => env('REDIS_DB', '0'),
         ],
@@ -137,7 +151,12 @@ return [
         'cache' => [
             'url' => env('REDIS_URL'),
             'host' => env('REDIS_HOST', '127.0.0.1'),
+<<<<<<< HEAD
             'password' => env('REDIS_PASSWORD', null),
+=======
+            'username' => env('REDIS_USERNAME'),
+            'password' => env('REDIS_PASSWORD'),
+>>>>>>> c7c93a3 (sample todo project using laravel)
             'port' => env('REDIS_PORT', '6379'),
             'database' => env('REDIS_CACHE_DB', '1'),
         ],

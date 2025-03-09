@@ -28,38 +28,71 @@ return [
     | sending an e-mail. You will specify which one you are using for your
     | mailers below. You are free to add additional mailers as required.
     |
+<<<<<<< HEAD
     | Supported: "smtp", "sendmail", "mailgun", "ses",
     |            "postmark", "log", "array", "failover"
+=======
+    | Supported: "smtp", "sendmail", "mailgun", "ses", "ses-v2",
+    |            "postmark", "log", "array", "failover", "roundrobin"
+>>>>>>> c7c93a3 (sample todo project using laravel)
     |
     */
 
     'mailers' => [
         'smtp' => [
             'transport' => 'smtp',
+<<<<<<< HEAD
+=======
+            'url' => env('MAIL_URL'),
+>>>>>>> c7c93a3 (sample todo project using laravel)
             'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
             'port' => env('MAIL_PORT', 587),
             'encryption' => env('MAIL_ENCRYPTION', 'tls'),
             'username' => env('MAIL_USERNAME'),
             'password' => env('MAIL_PASSWORD'),
             'timeout' => null,
+<<<<<<< HEAD
             'auth_mode' => null,
+=======
+            'local_domain' => env('MAIL_EHLO_DOMAIN'),
+>>>>>>> c7c93a3 (sample todo project using laravel)
         ],
 
         'ses' => [
             'transport' => 'ses',
         ],
 
+<<<<<<< HEAD
         'mailgun' => [
             'transport' => 'mailgun',
         ],
 
         'postmark' => [
             'transport' => 'postmark',
+=======
+        'postmark' => [
+            'transport' => 'postmark',
+            // 'message_stream_id' => null,
+            // 'client' => [
+            //     'timeout' => 5,
+            // ],
+        ],
+
+        'mailgun' => [
+            'transport' => 'mailgun',
+            // 'client' => [
+            //     'timeout' => 5,
+            // ],
+>>>>>>> c7c93a3 (sample todo project using laravel)
         ],
 
         'sendmail' => [
             'transport' => 'sendmail',
+<<<<<<< HEAD
             'path' => env('MAIL_SENDMAIL_PATH', '/usr/sbin/sendmail -t -i'),
+=======
+            'path' => env('MAIL_SENDMAIL_PATH', '/usr/sbin/sendmail -bs -i'),
+>>>>>>> c7c93a3 (sample todo project using laravel)
         ],
 
         'log' => [
@@ -78,6 +111,17 @@ return [
                 'log',
             ],
         ],
+<<<<<<< HEAD
+=======
+
+        'roundrobin' => [
+            'transport' => 'roundrobin',
+            'mailers' => [
+                'ses',
+                'postmark',
+            ],
+        ],
+>>>>>>> c7c93a3 (sample todo project using laravel)
     ],
 
     /*
